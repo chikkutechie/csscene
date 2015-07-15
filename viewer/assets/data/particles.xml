@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<chikkooos>
+	<item>
+        <depthtest enable="1"/>
+        <blending  enable="1"/>
+        <culling  enable="1"/>
+		<perspectivetheta id="1000" fovy="60" aspect="0.5" near="1" far="20">
+			<translate tx="0.0" ty="0.0" tz="-5.0">
+				<light position="0.0 20.0 2.0 0.0" ambient="0.2 0.2 0.0" diffuse="0.5 0.5 0.0" specular="0.2 0.2 0.0"
+				       constatten="1.0" linearatten="0.01" quadatten="0.001" cutoff="180">
+			        <translate tx="0.0" ty="1.0" tz="0.0">
+                        <texture name="data/explosion.png">
+                            <velocityparticles xstart="0.0 0.0" ystart="0.0 0.0" zstart="0.0 0.0"
+                                   xvelocity="-0.05 0.05" yvelocity="0.1 0.2" zvelocity="-0.01 0.01"
+                                   count="500" size="2" speed="8 8" gravity="0.0 -1.0 0.0" duration="2.0" alphatransition="1" repeat="1">
+                            </velocityparticles>
+                        </texture>
+			        </translate>
+			        <translate tx="0.0" ty="0.0" tz="0.0">
+                        <texture name="data/wt2.png">
+                            <bezierparticles 
+                                   xstart="0.0 0.0" ystart="0.0 0.0" zstart="0.0 0.0"
+                                   xend="-0.01 0.01" yend="0.25 0.25" zend="0.0 0.0"
+                                   xcontrol="-0.5 0.5" ycontrol="0.25 0.25" zcontrol="-0.5 0.5"
+                                   count="5000" size="2" duration="1.0" smoothstop="0" repeat="1">
+                            </bezierparticles>
+                        </texture>
+			        </translate>
+			        <translate tx="0.0" ty="-1.0" tz="0.0">
+                        <texture name="data/explosion.png">
+                            <linearparticles 
+                                   xstart="0.0 0.0" ystart="0.0 0.0" zstart="0.0 0.0"
+                                   xend="-0.5 0.5" yend="0.5 0.5" zend="0.0 0.0"
+                                   count="5000" size="3" duration="1.0" repeat="1">
+                            </linearparticles>
+                        </texture>
+			        </translate>
+			        <translate tx="0.0" ty="-2.0" tz="0.0">
+                        <texture name="data/explosion.png">
+                            <velocityparticles xstart="0.0 0.0" ystart="0.0 0.0" zstart="0.0 0.0"
+                                   xvelocity="-0.01 0.01" yvelocity="-0.01 0.01" zvelocity="-0.01 0.01"
+                                   count="1000" size="15" speed="5 5" gravity="0.0 0.0 0.0" duration="2.0" alphatransition="0" repeat="1">
+                            </velocityparticles>
+                        </texture>
+			        </translate>
+				</light>
+			</translate>
+		</perspectivetheta>
+	</item>
+</chikkooos>
+
+

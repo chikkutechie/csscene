@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_title">Viewer</string>
+    <string name="gles1">gles 1.x</string>
+    <string name="gles2">gles 2.0</string>
+</resources>
+

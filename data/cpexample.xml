@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<chikkooos>
+
+	<item>
+        <cpworld id="1" gravity="0 -500 0 0" timestep="0.017" velocityiterations="8" positioniterations="3">
+            <depthtest enable="1"/>
+            <blending  enable="1"/>
+            <culling  enable="1"/>
+
+            <parallel id="1000" left="0" right="480" bottom="0" top="800" near="-100" far="100">
+	    		<light position="240 400 100.0 0.0" ambient="0.2 0.2 0.0" diffuse="0.5 0.5 0.0" specular="0.2 0.2 0.0">
+
+                    <cpbody type="static">
+                        <cpshape segment="10 100 460 100" radius="2" friction="0.9f"/>
+                    </cpbody>
+
+                    <cpbody id="2000" position="165 500" angle="45" mass="100">
+                        <cpshape body="2000" box="50 50" friction="0.5f"/>
+                    </cpbody>
+        
+                    <cpbody position="145 400" angle="45" mass="1">
+                        <cpshape box="50 50" friction="0.5f"/>
+                    </cpbody>
+
+                    <cpbody position="125 300" angle="45" mass="2">
+                        <cpshape circle="50" mass="2" friction="1.0f"/>
+                    </cpbody>
+
+                    <cpbody position="105 200" angle="45" mass="3">
+                        <cpshape box="50 50" friction="5.1f"/>
+                    </cpbody>
+
+                    <cpbody position="85 100" angle="45" mass="3">
+                        <cpshape circle="50" friction="7.5f"/>
+                    </cpbody>
+
+
+                    <cpbody position="500 900" angle="45" mass="1">
+                        <cpshape circle="10" friction="30.1f"/>
+                    </cpbody>
+
+                    <cpbody position="400 800" angle="45" mass="1">
+                        <cpshape circle="20" friction="0.2f"/>
+                    </cpbody>
+
+                    <cpbody position="300 700" angle="45" mass="2">
+                        <cpshape circle="30" friction="0.3f"/>
+                    </cpbody>
+
+                    <cpbody position="200 500" mass="3">
+                        <cpshape circle="40" friction="0.4f"/>
+                    </cpbody>
+
+                    <cpbody position="100 400" angle="45" mass="3">
+                        <cpshape circle="40" friction="0.5f"/>
+                    </cpbody>
+
+
+                    <cpbody position="305 500" mass="1">
+                        <cpshape circle="50" friction="0.5f"/>
+                    </cpbody>
+
+                    <cpbody position="325 400" mass="1">
+                        <cpshape box="50 50" friction="0.1f"/>
+                    </cpbody>
+
+                    <cpbody position="345 300" mass="2">
+                        <cpshape circle="50" friction="0.2f"/>
+                    </cpbody>
+
+                    <cpbody position="365 200" mass="3">
+                        <cpshape box="50 50" friction="0.3f"/>
+                    </cpbody>
+
+                    <cpbody position="385 100" mass="3">
+                        <cpshape circle="50" friction="0.4f"/>
+                    </cpbody>
+
+
+                </light>
+            </parallel>
+        </cpworld>
+	</item>
+</chikkooos>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<chikkooos>
+    <resource>
+        <shape id="100" box="1.0 1.0 1.0" buffer="1"/>
+        <shape id="101" sphere="1.0" buffer="1"/>
+        <shape id="102" vertices="-1.0 -1.0  1.0 1.0 -1.0  1.0 1.0  1.0  1.0 -1.0  1.0  1.0 -1.0 -1.0 -1.0 -1.0  1.0 -1.0 1.0  1.0 -1.0 1.0 -1.0 -1.0 -1.0  1.0 -1.0 -1.0  1.0  1.0 1.0  1.0  1.0 1.0  1.0 -1.0 -1.0 -1.0 -1.0 1.0 -1.0 -1.0 1.0 -1.0  1.0 -1.0 -1.0  1.0 1.0 -1.0 -1.0 1.0  1.0 -1.0 1.0  1.0  1.0 1.0 -1.0  1.0 -1.0 -1.0 -1.0 -1.0 -1.0  1.0 -1.0  1.0  1.0 -1.0  1.0 -1.0" normals="0.0  0.0  1.0 0.0  0.0  1.0 0.0  0.0  1.0 0.0  0.0  1.0 0.0  0.0 -1.0 0.0  0.0 -1.0 0.0  0.0 -1.0 0.0  0.0 -1.0 0.0  1.0  0.0 0.0  1.0  0.0 0.0  1.0  0.0 0.0  1.0  0.0 0.0 -1.0  0.0 0.0 -1.0  0.0 0.0 -1.0  0.0 0.0 -1.0  0.0 1.0  0.0  0.0 1.0  0.0  0.0 1.0  0.0  0.0 1.0  0.0  0.0 -1.0  0.0  0.0 -1.0  0.0  0.0 -1.0  0.0  0.0 -1.0  0.0  0.0" texcoords="0.0  0.0 1.0  0.0 1.0  1.0 0.0  1.0 0.0  0.0 1.0  0.0 1.0  1.0 0.0  1.0 0.0  0.0 1.0  0.0 1.0  1.0 0.0  1.0 0.0  0.0 1.0  0.0 1.0  1.0 0.0  1.0 0.0  0.0 1.0  0.0 1.0  1.0 0.0  1.0 0.0  0.0 1.0  0.0 1.0  1.0 0.0  1.0" indices="0  1  2      0  2  3    4  5  6      4  6  7    8  9  10     8  10 11   12 13 14     12 14 15   16 17 18     16 18 19   20 21 22     20 22 23" buffer="1"/>
+
+        <texture id="200" name="data/wt1.png"/>
+        <texture id="201" name="data/wt2.png"/>
+        <texture id="202" name="data/wt3.png"/>
+
+    </resource>
+    <item>
+        <depthtest enable="1"/>
+        <blending  enable="1"/>
+        <culling  enable="1"/>
+        <perspectivetheta id="1000" fovy="60" aspect="0.5" near="1" far="20">
+            <translate tx="0.0" ty="0" tz="-10.0">
+                <lightanimation fromposition="0.0 2.0 20.0 0.0" fromambient="0.01 0.01 0.01" fromdiffuse="0.01 0.01 0.01" fromspecular="0.01 0.01 0.01"
+                       toposition="0.0 2.0 20.0 0.0" toambient="0.5 0.5 0.5" todiffuse="1.0 1.0 1.0" tospecular="0.2 0.2 0.2" repeat="0">
+
+                    <textureanimation textures="200 201 202 200" repeat="1" duration="1.0" reverse="0">
+                        <translate tz="-2">
+                            <rectangle x1="-2" x2="-2" y1="2" y2="2"/>
+                        </translate>
+                    </textureanimation>
+                
+                    <material shininess="2" ambient="0.0 0.2 0.0" diffuse="0.0 0.8 0.0" specular="0.0 0.2 0.0">
+
+                        <translate ty="0">
+                            <translateanimation fromX="2" fromY="0" fromZ="1" toX="-2" toY="0" toZ="0" repeat="1" reverse="1">
+                                <shape resource="101"  shadow="1"/>
+                            </translateanimation>
+                        </translate>
+
+                        <translate ty="-2">
+                            <rotateanimation fromX="0" fromY="1" fromZ="0" toX="0" toY="1" toZ="0" fromAngle="0" toAngle="360" repeat="1">
+                                <shapeanimation shapes="100 101" repeat="1" shadow="1"/>
+                            </rotateanimation>
+                        </translate>
+
+                        <translate ty="0">
+                            <rotateanimation fromX="0" fromY="0" fromZ="1" toX="1" toY="1" toZ="0" fromAngle="0" toAngle="360" repeat="1">
+                                <translate ty="2">
+                                    <scaleanimation fromX="1" fromY="1" fromZ="1" toX="0.1" toY="0.1" toZ="0.1" repeat="1" reverse="1">
+                                           <shape resource="102" shadow="1"/>
+                                    </scaleanimation>
+                                </translate>
+                            </rotateanimation>
+                        </translate>
+
+                    </material>
+                </lightanimation>
+            </translate>
+        </perspectivetheta>
+    </item>
+</chikkooos>
+
+

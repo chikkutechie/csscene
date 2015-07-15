@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<chikkooos>
+
+    <resource>
+        <shape id="100" box="1.0 1.0 1.0" buffer="1"/>
+        <shape id="101" sphere="1.0" buffer="1"/>
+    </resource>
+
+	<item>
+        <b2dworld id="1" gravity="0 -10 0 0" timestep="-0.017" velocityiterations="8" positioniterations="3">
+            <depthtest enable="1"/>
+            <blending  enable="1"/>
+            <culling  enable="1"/>
+
+            <parallel id="1000" left="0" right="480" bottom="0" top="800" near="-100" far="100">
+			    <light position="240 400 100.0 0.0" ambient="0.2 0.2 0.0" diffuse="0.5 0.5 0.0" specular="0.2 0.2 0.0">
+                    <b2dbody position="165 500" box="25 25" density="1" />
+                    <b2dbody position="145 400" box="25 25" density="1" />
+                    <b2dbody position="125 300" box="25 25" density="2" />
+                    <b2dbody position="105 200" box="25 25" density="3" />
+                    <b2dbody position="85 100" box="25 25" density="3" />
+
+                    <b2dbody position="500 900" circle="10" density="1" />
+                    <b2dbody position="400 800" circle="20" density="1" />
+                    <b2dbody position="300 700" circle="30" density="2" />
+                    <b2dbody position="200 500" circle="40" density="3" />
+                    <b2dbody position="100 400" circle="40" density="3" />
+
+                    <b2dbody position="305 500" box="25 25" density="1" />
+                    <b2dbody position="325 400" box="25 25" density="1" />
+                    <b2dbody position="345 300" box="25 25" density="2" />
+                    <b2dbody position="365 200" box="25 25" density="3" />
+                    <b2dbody position="385 100" box="25 25" density="3" />
+                    <b2dbody type="static" position="30 10" box="450 5" />
+                </light>
+            </parallel>
+
+        </b2dworld>
+	</item>
+
+</chikkooos>
+
+

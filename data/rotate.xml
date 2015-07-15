@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<chikkooos>
+    <resource>
+        <shape id="100" box="1.0 1.0 1.0" buffer="1"/>
+        <shape id="101" sphere="1.0" buffer="1"/>
+    </resource>
+	<item>
+    <bulletworld gravity="0 -10 0">
+        <depthtest enable="1"/>
+        <blending  enable="1"/>
+        <culling  enable="1"/>
+		<perspectivetheta id="1000" fovy="60" aspect="0.5" near="1" far="20">
+			<translate tx="0.0" ty="0.0" tz="-5.0">
+				<light position="0.0 20.0 2.0 1.0" ambient="0.2 0.2 0.0" diffuse="0.5 0.5 0.0" specular="0.2 0.2 0.0"
+				       constatten="1.0" linearatten="0.01" quadatten="0.001" cutoff="180">
+                    <rotate rx="0" ry="0" rz="1" angle="10">
+		    		    <cube resource="100"/>
+                    </rotate>
+				</light>
+			</translate>
+		</perspectivetheta>
+    </bulletworld>
+	</item>
+</chikkooos>
+
+
