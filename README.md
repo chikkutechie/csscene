@@ -17,6 +17,8 @@ Android
 -------
 Build the csscene library by going to the android/gles2 and android/gles1 folder. Use ndk-build command
 Go to the viewer directory and build the shared library, use ndk-build command.
-Open the viewer application in eclise and build the application.You might want to link the jsrc folder to your application to complete the build.
+Open the viewer application in eclise and build the application.
+You might want to link the jsrc folder to your application to complete the build. This can be done by going to the application properties->Java Build Path->Source tab->Link  source
+
 
 
