@@ -59,7 +59,7 @@ include $(PREBUILT_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := main.cpp
+LOCAL_SRC_FILES := main.cpp ../../src/android/randroidnativeadapter.cpp
 
 LOCAL_MODULE    := libviewergles1
 
@@ -80,7 +80,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := main.cpp
+LOCAL_SRC_FILES := main.cpp ../../src/android/randroidnativeadapter.cpp
 
 LOCAL_MODULE    := libviewergles2
 
