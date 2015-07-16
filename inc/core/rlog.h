@@ -236,6 +236,31 @@ public:
         return *this;
     }
 
+    RNoLog& operator<<(float)
+    {
+        return *this;
+    }
+
+    RNoLog& operator<<(double)
+    {
+        return *this;
+    }
+
+
+    RNoLog& operator<<(RVector const &)
+    {
+        return *this;
+    }
+
+    RNoLog& operator<<(RMatrix const &)
+    {
+        return *this;
+    }
+
+    RNoLog& operator<<(RTransformation const &)
+    {
+        return *this;
+    }
 private:
     RSmartPointer<ROutDevice> mOut;
 };
