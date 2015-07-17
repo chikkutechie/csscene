@@ -16,7 +16,7 @@ INCLUDES = \
            -I../../external/chipmunk/include
 
 LIBS = \
-       -L../../external/box2d/Box2D/linux -lbox2d_@ARCH@ \
+       -L../../external/box2d/linux -lbox2d_@ARCH@ \
        -L../../external/bullet/linux -lbullet_@ARCH@ \
        -L../../external/chipmunk/linux -lchipmunk_@ARCH@ \
        -L../../external/tinyxml/linux -ltinyxml_@ARCH@ \

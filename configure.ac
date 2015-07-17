@@ -52,19 +52,12 @@ AC_CHECK_HEADERS(GL/glut.h GL/gl.h)
 
 AC_OUTPUT(
           Makefile
-          external/lodepng/linux/Makefile
-          external/tinyxml/linux/Makefile
-          external/bullet/linux/Makefile
-          external/box2d/Box2D/linux/Makefile
-          external/chipmunk/linux/Makefile
           linux/Makefile
           linux/gles1/Makefile
           linux/gles2/Makefile
           viewer/linux/Makefile
           viewer/linux/gles1/Makefile
           viewer/linux/gles2/Makefile
-          winthequeen/linux/Makefile
-          winthequeen/linux/gles2/Makefile
           utest/linux/Makefile
           )
 

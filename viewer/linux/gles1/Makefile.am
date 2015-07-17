@@ -14,7 +14,7 @@ INCLUDES = \
            -I../../../inc/gc  -I../../../inc/glut  -I../../../inc/math  -I../../../inc/scene -I../../../inc/x11
 
 LIBS = \
-       -L../../../external/box2d/Box2D/linux -lbox2d_@ARCH@ \
+       -L../../../external/box2d/linux -lbox2d_@ARCH@ \
        -L../../../external/bullet/linux -lbullet_@ARCH@ \
        -L../../../external/chipmunk/linux -lchipmunk_@ARCH@ \
        -L../../../external/tinyxml/linux -ltinyxml_@ARCH@ \
