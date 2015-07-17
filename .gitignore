@@ -139,6 +139,10 @@ viewer/linux/gles2/viewer
 utest/linux/utest_matrix
 utest/linux/utest_transformation
 
+linux/gles1/libchikkooos_x86.a
+linux/gles2/libchikkooos_x86.a
+linux/libchikkooos_x86.a
+
 
 codeblocks/
 
