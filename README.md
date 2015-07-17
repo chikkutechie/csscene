@@ -8,7 +8,7 @@ Currently only work on 32 bit system.
 ### Building 
 1. Go to the root folder csscene
 2. run ./autogen.sh
-3. run ./configure
+3. run ./configure --build=i686-pc-linux-gnu "CFLAGS=-m32" "CXXFLAGS=-m32" "CXXFLAGS=-m32"  "LDFLAGS=-m32"
 
 ### Executing the viewer application
 1 run ./viewer/linux/viewer from the root directory, you can provide scene with --scene option. scene files are available in the data folder.
