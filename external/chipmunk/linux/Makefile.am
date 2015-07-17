@@ -1,7 +1,7 @@
 
-lib_LIBRARIES = libchipmunk.a
+lib_LIBRARIES = libchipmunk_@ARCH@.a
 
-libchipmunk_a_SOURCES = \
+libchipmunk_@ARCH@_a_SOURCES = \
     ../src/cpPinJoint.c \
     ../src/cpRotaryLimitJoint.c \
     ../src/cpPolyline.c \
@@ -35,10 +35,6 @@ libchipmunk_a_SOURCES = \
     ../src/cpGrooveJoint.c
 
 INCLUDES = -I..  -I../include
-LIBS =
-CPPFLAGS =
-CXXFLAGS = -g3
-CFLAGS = -g3 --std=c99
-LDFLAGS =
+AM_CFLAGS = --std=c99
 
 

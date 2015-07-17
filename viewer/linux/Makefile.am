@@ -16,23 +16,19 @@ INCLUDES = \
            -I../../external/chipmunk/include
 
 LIBS = \
-       -L../../external/box2d/Box2D/linux -lbox2d \
-       -L../../external/bullet/linux -lbullet \
-       -L../../external/chipmunk/linux -lchipmunk \
-       -L../../external/tinyxml/linux -ltinyxml \
-       -L../../external/lodepng/linux -llodepng \
-       -L../../linux -lchikkooos \
+       -L../../external/box2d/Box2D/linux -lbox2d_@ARCH@ \
+       -L../../external/bullet/linux -lbullet_@ARCH@ \
+       -L../../external/chipmunk/linux -lchipmunk_@ARCH@ \
+       -L../../external/tinyxml/linux -ltinyxml_@ARCH@ \
+       -L../../external/lodepng/linux -llodepng_@ARCH@ \
+       -L../../linux -lchikkooos_@ARCH@ \
        -lGL -lGLU -lglut -lEGL
 
-CXXFLAGS = -g3 -Wall -DGL_GLEXT_PROTOTYPES
+AM_CXXFLAGS = -DGL_GLEXT_PROTOTYPES
 
-CFLAGS = -g3 -Wall
+DEPS_LIBS = ../../linux/libchikkooos_@ARCH@.a
 
-LDFLAGS = -g3
-
-DEPS_LIBS = ../../linux/libchikkooos.a
-
-CPPFLAGS = $(DEPS_CFLAGS)
+AM_CPPFLAGS = $(DEPS_CFLAGS)
 
 viewer_LDADD = $(DEPS_LIBS)
 

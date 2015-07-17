@@ -1,7 +1,7 @@
 
-lib_LIBRARIES = libchikkooos.a
+lib_LIBRARIES = libchikkooos_@ARCH@.a
 
-libchikkooos_a_SOURCES = \
+libchikkooos_@ARCH@_a_SOURCES = \
     ../../src/math/rtransformation.cpp \
     ../../src/math/rquaternion.cpp \
     ../../src/math/rmatrix.cpp \
@@ -119,9 +119,6 @@ INCLUDES = -I../../inc \
            -I../../external/box2d
 
 LIBS = -lz -pthread -lX11 -lEGL -lGLESv1_CM
-CPPFLAGS =
-CXXFLAGS = -g3 -Wall -DGL_GLEXT_PROTOTYPES -DR_ES -DNO_GLUT
-CFLAGS = -g3 -Wall
-LDFLAGS =
+AM_CXXFLAGS = -DGL_GLEXT_PROTOTYPES -DR_ES -DNO_GLUT
 
 

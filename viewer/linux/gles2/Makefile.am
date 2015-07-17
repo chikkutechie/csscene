@@ -15,19 +15,17 @@ INCLUDES = \
            -I../../../inc/math  -I../../../inc/scene -I../../../inc/x11
 
 LIBS = \
-       -L../../../external/box2d/Box2D/linux -lbox2d \
-       -L../../../external/bullet/linux -lbullet \
-       -L../../../external/chipmunk/linux -lchipmunk \
-       -L../../../external/tinyxml/linux -ltinyxml \
-       -L../../../external/lodepng/linux -llodepng \
-       -L../../../linux/gles2 -lchikkooos \
+       -L../../../external/box2d/Box2D/linux -lbox2d_@ARCH@ \
+       -L../../../external/bullet/linux -lbullet_@ARCH@ \
+       -L../../../external/chipmunk/linux -lchipmunk_@ARCH@ \
+       -L../../../external/tinyxml/linux -ltinyxml_@ARCH@ \
+       -L../../../external/lodepng/linux -llodepng_@ARCH@ \
+       -L../../../linux/gles2 -lchikkooos_@ARCH@ \
        -lEGL -lX11 -lGLESv2
-CXXFLAGS = -g3 -Wall -DGL_GLEXT_PROTOTYPES -DR_ES2 -DNO_GLUT
-CFLAGS = -g3 -Wall
-LDFLAGS = -g3
+AM_CXXFLAGS = -g3 -Wall -DGL_GLEXT_PROTOTYPES -DR_ES2 -DNO_GLUT
 
-DEPS_LIBS = ../../../linux/gles2/libchikkooos.a
+DEPS_LIBS = ../../../linux/gles2/libchikkooos_@ARCH@.a
 
-CPPFLAGS = $(DEPS_CFLAGS)
+AM_CPPFLAGS = $(DEPS_CFLAGS)
 viewer_LDADD = $(DEPS_LIBS)
 

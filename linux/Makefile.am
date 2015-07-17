@@ -1,9 +1,9 @@
 
 SUBDIRS = gles1 gles2
 
-lib_LIBRARIES = libchikkooos.a
+lib_LIBRARIES = libchikkooos_@ARCH@.a
 
-libchikkooos_a_SOURCES = \
+libchikkooos_@ARCH@_a_SOURCES = \
     ../src/math/rtransformation.cpp \
     ../src/math/rquaternion.cpp \
     ../src/math/rmatrix.cpp \
@@ -127,8 +127,5 @@ INCLUDES = -I../inc \
 
 LIBS = -lz -pthread -lGL -lGLU -lglut \
        -L../external/tokamak/linux -ltokamak
-CPPFLAGS =
-CXXFLAGS = -g3 -Wall -DGL_GLEXT_PROTOTYPES  -DRGL_FULL
-CFLAGS = -g3 -Wall
-LDFLAGS =
+AM_CXXFLAGS = -DGL_GLEXT_PROTOTYPES  -DRGL_FULL
 

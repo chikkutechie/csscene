@@ -11,15 +11,13 @@ utest_transformation_SOURCES = ../utest_transformation.cpp
 INCLUDES = -I../../external/bullet/src -I../../inc \
            -I../../inc/bullet  -I../../inc/core -I../../inc/gc  -I../../inc/glut  -I../../inc/math  -I../../inc/scene -I../../inc/x11
 LIBS = \
-       -L../../external/bullet/linux -lbullet \
-       -L../../external/tinyxml/linux -ltinyxml \
-       -L../../external/lodepng/linux -llodepng \
-       -L../../linux -lchikkooos \
+       -L../../external/bullet/linux -lbullet_@ARCH@ \
+       -L../../external/tinyxml/linux -ltinyxml_@ARCH@ \
+       -L../../external/lodepng/linux -llodepng_@ARCH@ \
+       -L../../linux -lchikkooos_@ARCH@ \
        -lGL -lGLU -lglut -lEGL
        
-CXXFLAGS = -g3 -Wall -DGL_GLEXT_PROTOTYPES
-CFLAGS = -g3 -Wall
-LDFLAGS = -g3
+AM_CXXFLAGS = -DGL_GLEXT_PROTOTYPES
 
 test: $(test_Executables)
 
